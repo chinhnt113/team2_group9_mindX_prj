@@ -2,6 +2,11 @@ ion-icon {
     font-size: 20px;
 }
 
+body {
+    animation: rainbow-bg 120s linear;
+    animation-iteration-count: infinite;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -215,3 +220,41 @@ ion-icon {
     border-radius: 1.5px;
 }
 
+@keyframes rainbow-bg{
+    100%,0%{
+        background-color: #fa6f7a;
+    }
+    8%{
+        background-color: #fc968e;
+    }
+    16%{
+        background-color: #f4bb94;
+    }
+    25%{
+        background-color: #d5edae;
+    }
+    33%{
+        background-color: #9fe8cd;
+    }
+    41%{
+        background-color: #b3bee8;
+    }
+    50%{
+        background-color: #a48ec8;
+    }
+    58%{
+        background-color: #76c9e0;
+    }
+    66%{
+        background-color: #77DD77;
+    }
+    75%{
+        background-color: #E9EC6B;
+    }
+    83%{
+        background-color: #EFBE7D;
+    }
+    91%{
+        background-color: #FF6D6A;
+    }
+}
