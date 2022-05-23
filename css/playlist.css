@@ -183,13 +183,14 @@ body {
     width: 60px;
 }
 .sound-volume {
-    display: none;
+    visibility: hidden;
     position: relative;
     transition: width .2s;
     overflow: hidden;
     width: 80px;
     height: 20px;
     opacity: .5;
+    /* check */
 }
 .sound-volume:hover{
     opacity: 1;
