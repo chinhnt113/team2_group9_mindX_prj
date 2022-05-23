@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist | Relax, My Bro</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/playlist.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-logo">
+            RelaxBro
+        </div>
+        <div class="header-timer">
+            <div class="timer-play"><ion-icon name="play-outline"></ion-icon></div>
+            <div class="timer-pause"><ion-icon name="pause-outline"></ion-icon></div>
+            <div class="timer-count">
+                <span class="time-count-min">60</span>
+                <span> : </span>
+                <span class="time-count-sec">00</span>
+            </div>
+            <div class="timer-reset"><ion-icon name="refresh-outline"></ion-icon></div>
+        </div>
+        <div class="header-menu">
+            <div class="header-volume-control">
+                <div class="total-volume-panel">
+                    <div class="input-div">
+                        <div class="volume-input-div">
+                            <input type="range" value="100" step="5">
+                            <div class="volume-progress"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-menu-mute"><ion-icon name="volume-mute-outline"></ion-icon></div>
+                <div class="header-menu-unmute"><ion-icon name="volume-high-outline"></ion-icon></div>
+            </div>
+            <div class="header-menu-logout">
+                <ion-icon name="log-out-outline"></ion-icon>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container-header">Choose and mix your favourite sounds.</div>
+        <div class="container-content-row">
+            <div class="sound-item" id="fire">
+                <div class="sound-icon"><ion-icon name="flame-outline"></ion-icon></div>
+                <div class="sound-volume">
+                    <div class="input-div">
+                        <div class="volume-input-div">
+                            <input type="range" value="100" step="5">
+                            <div class="volume-progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sound-item" id="rain">
+                <div class="sound-icon"><ion-icon name="rainy-outline"></ion-icon></div>
+                <div class="sound-volume">
+                    <div class="input-div">
+                        <div class="volume-input-div">
+                            <input type="range" value="100" step="5">
+                            <div class="volume-progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sound-item" id="garden">
+                <div class="sound-icon"><ion-icon name="flower-outline"></ion-icon></div>
+                <div class="sound-volume" >
+                    <div class="input-div">
+                        <div class="volume-input-div">
+                            <input type="range" value="100" step="5">
+                            <div class="volume-progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-content-row">
+            <div class="sound-item" id="seaside">
+                <div class="sound-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-water" viewBox="0 0 16 16">
+                    <path d="M.036 3.314a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 3.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 6.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 9.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.757-.703a.5.5 0 0 1-.278-.65z"/>
+                  </svg></div>
+                <div class="sound-volume" >
+                    <div class="input-div">
+                        <div class="volume-input-div">
+                            <input type="range" value="100" step="5">
+                            <div class="volume-progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sound-item" id="storm-with-rain">
+                <div class="sound-icon"><ion-icon name="thunderstorm-outline"></ion-icon></div>
+                <div class="sound-volume">
+                    <div class="input-div">
+                        <div class="volume-input-div">
+                            <input type="range" value="100" step="5">
+                            <div class="volume-progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sound-item" id="storm">
+                <div class="sound-icon"><ion-icon name="flash-outline"></ion-icon></div>
+                <div class="sound-volume" >
+                    <div class="input-div">
+                        <div class="volume-input-div">
+                            <input type="range" value="100" step="5">
+                            <div class="volume-progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-content-row">
+            <div class="sound-item" id="summer-night">
+                <div class="sound-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bug" viewBox="0 0 16 16">
+                    <path d="M4.355.522a.5.5 0 0 1 .623.333l.291.956A4.979 4.979 0 0 1 8 1c1.007 0 1.946.298 2.731.811l.29-.956a.5.5 0 1 1 .957.29l-.41 1.352A4.985 4.985 0 0 1 13 6h.5a.5.5 0 0 0 .5-.5V5a.5.5 0 0 1 1 0v.5A1.5 1.5 0 0 1 13.5 7H13v1h1.5a.5.5 0 0 1 0 1H13v1h.5a1.5 1.5 0 0 1 1.5 1.5v.5a.5.5 0 1 1-1 0v-.5a.5.5 0 0 0-.5-.5H13a5 5 0 0 1-10 0h-.5a.5.5 0 0 0-.5.5v.5a.5.5 0 1 1-1 0v-.5A1.5 1.5 0 0 1 2.5 10H3V9H1.5a.5.5 0 0 1 0-1H3V7h-.5A1.5 1.5 0 0 1 1 5.5V5a.5.5 0 0 1 1 0v.5a.5.5 0 0 0 .5.5H3c0-1.364.547-2.601 1.432-3.503l-.41-1.352a.5.5 0 0 1 .333-.623zM4 7v4a4 4 0 0 0 3.5 3.97V7H4zm4.5 0v7.97A4 4 0 0 0 12 11V7H8.5zM12 6a3.989 3.989 0 0 0-1.334-2.982A3.983 3.983 0 0 0 8 2a3.983 3.983 0 0 0-2.667 1.018A3.989 3.989 0 0 0 4 6h8z"/>
+                  </svg></div>
+                <div class="sound-volume" >
+                    <div class="input-div">
+                        <div class="volume-input-div">
+                            <input type="range" value="100" step="5">
+                            <div class="volume-progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sound-item" id="water-stream">
+                <div class="sound-icon"><ion-icon name="water-outline"></ion-icon></div>
+                <div class="sound-volume">
+                    <div class="input-div">
+                        <div class="volume-input-div">
+                            <input type="range" value="100" step="5">
+                            <div class="volume-progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sound-item" id="wind">
+                <div class="sound-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wind" viewBox="0 0 16 16">
+                    <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z"/>
+                  </svg></div>
+                <div class="sound-volume" >
+                    <div class="input-div">
+                        <div class="volume-input-div">
+                            <input type="range" value="100" step="5">
+                            <div class="volume-progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/playlist.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/94a2ef60d1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

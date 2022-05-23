@@ -1,0 +1,217 @@
+ion-icon {
+    font-size: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.15);
+}
+
+.header-logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.header-timer{
+    display: flex;
+    font-size: 20px;
+}
+.header-timer > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    margin: 0 5px;
+}
+.timer-play,
+.timer-pause,
+.timer-reset{
+    width: 50px;
+}
+.timer-count{
+    width: 150px;
+}
+.time-count-min{
+
+}
+.time-count-sec{
+
+}
+
+/* volume control slide */
+[type="range"] {
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    height: 1.5em;
+    background: transparent;
+    outline: none;
+}
+[type="range"],
+[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+[type="range"]::-webkit-slider-thumb {
+    box-sizing: border-box;
+    border: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+}
+[type="range"]::-moz-range-thumb {
+    box-sizing: border-box;
+    border: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.header-menu{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    column-gap: 10px;
+}
+.header-menu ion-icon {
+    font-size: 30px;
+}
+.header-volume-control {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.header-volume-control:hover .total-volume-panel{
+    visibility: visible;
+}
+.total-volume-panel {
+    visibility: hidden;
+    position: relative;
+    transition: width .2s;
+    overflow: hidden;
+    width: 80px;
+    height: 20px;
+    transform: translateY(-1px);
+    margin-right: 10px;
+    opacity: .5;
+}
+.total-volume-panel:hover {
+    opacity: 1;
+}
+.total-volume-panel .input-div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 80px;
+    height: 3px;
+}
+.total-volume-panel .input-div .volume-input-div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+}
+.total-volume-panel .input-div .volume-input-div input {
+    position: absolute;
+    top: -8.5px;
+    cursor: pointer;
+}
+.total-volume-panel .input-div .volume-input-div .volume-progress {
+    background: #fff;
+    width: 80px;
+    height: 100%;
+    border-radius: 1.5px;
+}
+.header-menu-mute{
+    display: none;
+}
+.header-menu-unmute{
+    display: block;
+}
+.header-menu-logout{
+    cursor: pointer;
+}
+
+.container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-header{
+    margin: 50px auto;
+    font-size: 20px;
+}
+.container-content-row{
+    display: flex;
+    column-gap: 50px;
+}
+.sound-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    height: 100px;
+    cursor: pointer;
+}
+.sound-icon{
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .5;
+}
+.sound-icon ion-icon,
+.sound-icon svg{
+    height: 60px;
+    width: 60px;
+}
+.sound-volume {
+    display: none;
+    position: relative;
+    transition: width .2s;
+    overflow: hidden;
+    width: 80px;
+    height: 20px;
+    opacity: .5;
+}
+.sound-volume:hover{
+    opacity: 1;
+}
+.sound-volume .input-div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 80px;
+    height: 3px;
+}
+.sound-volume .input-div .volume-input-div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+}
+.sound-volume .input-div .volume-input-div input {
+    position: absolute;
+    top: -8.5px;
+    cursor: pointer;
+}
+.sound-volume .input-div .volume-input-div .volume-progress {
+    background: #fff;
+    width: 80px;
+    height: 100%;
+    border-radius: 1.5px;
+}
+
