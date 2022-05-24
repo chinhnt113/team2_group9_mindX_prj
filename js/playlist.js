@@ -59,20 +59,20 @@ for (var i = 0; i < soundList.length; i++) {
 }
 
 // listen to play/pause nhạc
-const items = document.querySelectorAll('.sound-icon');
+const soundItems = document.querySelectorAll('.sound-icon');
 const soundBar = document.querySelectorAll('.sound-volume')
-for (const [i,item] of items.entries()) {
-    items[i].addEventListener('click', () => {
+for (const [i,item] of soundItems.entries()) {
+    soundItems[i].addEventListener('click', () => {
         if (!isPlaying[i]) {
             music[i].play();
             isPlaying[i] = true;
             soundBar[i].style.visibility = 'visible';
-            items[i].style.opacity = '1';
+            soundItems[i].style.opacity = '1';
         } else {
             music[i].pause();
             isPlaying[i] = false;
             soundBar[i].style.visibility = 'hidden';
-            items[i].style.opacity = '.5';
+            soundItems[i].style.opacity = '.5';
         }
     })
 }
@@ -83,3 +83,61 @@ for (const [i,soundItem] of soundVolRange.entries()) {
         updateVolumeAll ();
     });
 }
+
+//slider
+const slider = document.querySelector(".slider-container-tracker");
+const btnLeft = document.querySelector(".btn-left");
+const btnRight = document.querySelector(".btn-right");
+const items = document.querySelectorAll(".slider-item");
+
+var currentPos = 0;
+const slideLength = items.length;
+
+const rightClone1 = items[0].cloneNode(true);
+const rightClone2 = items[1].cloneNode(true);
+const rightClone3 = items[2].cloneNode(true);
+const leftClone1 = items[slideLength-1].cloneNode(true);
+const leftClone2 = items[slideLength-2].cloneNode(true);
+const leftClone3 = items[slideLength-3].cloneNode(true);
+
+slider.append(rightClone1);
+slider.append(rightClone2);
+slider.append(rightClone3);
+slider.prepend(leftClone1);
+slider.prepend(leftClone2);
+slider.prepend(leftClone3);
+
+const itemWidth = items[currentPos].clientWidth + 20; //thêm 10 margin và 10 border
+
+const moveToPos = (i) => {
+    slider.style.transform = `translateX(${-itemWidth * i -20}px)`;
+}
+slider.addEventListener('transitionend', () => {
+    if (currentPos === slideLength + 1) {
+        slider.style.transition = 'none';
+        currentPos = 1;
+        moveToPos(currentPos);
+    }
+    if (currentPos === 0) {
+        slider.style.transition = 'none';
+        currentPos = slideLength;
+        moveToPos(currentPos);
+    }
+})
+const moveNext = () => {
+    currentPos ++;
+    slider.style.transition = '.5s ease-out';
+    moveToPos(currentPos);
+}
+const movePrevious = () => {
+    currentPos --;
+    slider.style.transition = '.5s ease-out';
+    moveToPos(currentPos);
+}
+btnLeft.addEventListener('click', () => {
+    movePrevious();
+})
+btnRight.addEventListener('click', () => {
+    moveNext();
+})
+
