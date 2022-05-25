@@ -160,7 +160,8 @@ body {
 
 .slider{
     position: relative;
-    width: 80%;
+    width: 70%;
+    max-width: 900px;
     height: 100px;
     margin: 0 auto;
     overflow: hidden;
@@ -175,7 +176,7 @@ body {
     cursor: pointer;
 }
 .slider-btn ion-icon {
-    font-size: 50px;
+    font-size: 40px;
 }
 .btn-left,
 .btn-right{
@@ -184,15 +185,15 @@ body {
     height: 100%;
     width: 60px;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     opacity: .5;
 }
 .btn-left{
-    left: -2%;
+    /* left: -2%; */
+    justify-content: flex-start;
 }
 .btn-right{
-    right: -2%;
+    right: 0%;
     justify-content: flex-end;
 }
 .btn-left:hover{
