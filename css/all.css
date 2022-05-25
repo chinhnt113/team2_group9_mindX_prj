@@ -27,3 +27,6 @@ a {
     color: #fff;
 }
 
+ul {
+    list-style-type: none;
+}

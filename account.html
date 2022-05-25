@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account | RelaxBro</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/account.css">
+</head>
+<body>
+    <div class="header">
+        <a href="./playlist.html" class="header-logo">
+            RelaxBro
+        </a>
+    </div>
+    <div class="container">
+        <div class="navcol">
+            <div class="nav-item is-showing">Account</div>
+            <div class="nav-item">Timer</div>
+            <div class="nav-item">Preferences</div>
+            <div class="nav-item">Billing</div>
+        </div>
+        <div class="account-info">
+            <div class="form-name">PROFILE</div>
+            <div>
+                <form onsubmit="updateProfile()" action="" class="form-control-profile">
+                    <div class="form-left-col">
+                        <div class="input-label">Username</div>
+                        <div class="input-label">Email</div>
+                        <div class="input-label">First Name</div>
+                        <div class="input-label">Last Name</div>
+                        <button type="submit" class="submit-info-btn">Update</button>
+                        <div class="messProfile"></div>
+                    </div>
+                    <div class="form-right-col">
+                        <input type="text" class="input-value" id="username" disabled>
+                        <input type="text" class="input-value" id="email" disabled>
+                        <input type="text" id="fname" class="input-value">
+                        <input type="text" id="lname" class="input-value">
+                    </div>
+                </form>
+            </div>
+            <div class="line"></div>
+            <div class="form-name">PASSWORD</div>
+            <div>
+                <form action="" onsubmit="updatePassword()" class="form-control-profile">
+                    <div class="form-left-col">
+                        <div class="input-label">Current Password</div>
+                        <div class="input-label">New Password</div>
+                        <div class="input-label">Repeat Password</div>
+                        <button type="submit" class="submit-info-btn">Update</button>
+                        <div class="messPassword"></div>
+                    </div>
+                    <div class="form-right-col">
+                        <input type="password" id="currentPwd" class="input-value">
+                        <input type="password" id="newPwd" class="input-value">
+                        <input type="password" id="repeatPwd" class="input-value">
+                    </div>
+                </form>
+            </div>
+            <div class="line"></div>
+            <form action="" onsubmit="logout()">
+                <button type="submit" class="submit-info-btn">Logout</button>
+            </form>
+        </div>
+    </div>
+    <script src="./js/all.js"></script>
+    <script src="./js/account.js"></script>
+</body>
+</html>

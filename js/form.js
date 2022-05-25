@@ -94,6 +94,7 @@ function login(e) {
         errorMsg.innerText = 'Wrong username.'
     } else if (loginname.value == data.username && password.value == data.password) {
         sessionStorage.setItem('loginStatus', 'true');
+        sessionStorage.setItem('currentAccount', data.username);
         window.location.pathname = '/playlist.html';
     } else {
         errorMsg.innerText = 'Wrong password.'

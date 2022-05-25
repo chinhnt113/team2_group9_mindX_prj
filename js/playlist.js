@@ -1,7 +1,8 @@
 var loginStatus = sessionStorage.getItem('loginStatus');
 
 if (loginStatus == 'false') {
-    window.location.pathname = '/index.html';
+    // window.location.pathname = '/index.html';
+    history.back();
 }
 
 //logout
