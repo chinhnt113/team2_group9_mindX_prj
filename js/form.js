@@ -19,7 +19,7 @@
 // })
 
 var errorMsg = document.querySelector('.error-noti');
-var loginStatus = false;
+sessionStorage.setItem('loginStatus', 'false');
 
 function signup(e) {
     event.preventDefault();
@@ -93,7 +93,7 @@ function login(e) {
     if(user == null) {
         errorMsg.innerText = 'Wrong username.'
     } else if (loginname.value == data.username && password.value == data.password) {
-        loginStatus = true;
+        sessionStorage.setItem('loginStatus', 'true');
         window.location.pathname = '/playlist.html';
     } else {
         errorMsg.innerText = 'Wrong password.'

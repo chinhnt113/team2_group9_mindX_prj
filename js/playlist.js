@@ -1,6 +1,15 @@
-if (!loginStatus) {
-    window.location.pathname = '/index.html'
+var loginStatus = sessionStorage.getItem('loginStatus');
+
+if (loginStatus == 'false') {
+    window.location.pathname = '/index.html';
 }
+
+//logout
+const logoutBtn = document.querySelector('.header-menu-logout');
+logoutBtn.addEventListener('click', () => {
+    sessionStorage.setItem('loginStatus', 'false');
+    window.location.pathname = '/index.html';
+})
 
 // điều khiển âm thanh cả page
 const volumePanel = document.querySelector('.total-volume-panel');
