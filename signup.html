@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Signup | RelaxBro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./css/form.css">
 </head>
 <body>
     <div class="container">
         <div class="login">
-            <div class="login-conainer">
+            <div class="login-container">
                 <div class="Logoad"><a href="form.html">RelaxBro</a></div>
             <div class="caption">
                 <div>Welcome Back <br>Sign Up a New Account
@@ -26,16 +26,18 @@
                     Or Sign Up with your Email
                 </div>
             </div>
-            <form action="#" class="form" id="form-login">
+            <form action="#" onsubmit="signup();" class="form" id="form-signup">
                 <div class="input">
-                    <input type="email" placeholder="Email" id="Email">
+                    <input type="text" rules="required" placeholder="Username" id="signup_username">
                 </div>
                 <div class="input">
-                    <input type="password" placeholder="Password" id = "Password">
+                    <input type="email" rules="required" placeholder="Email" id="signup_email">
                 </div>
-                <button class="dangnhap" id="btn-login"> <a href="signup.html "style="color: white;
-                    text-decoration: none;
-                ">Sign Up for free</a></button>
+                <div class="input">
+                    <input type="password" rules="required" placeholder="Password" id = "signup_password">
+                </div>
+                <div class="error-noti"></div>
+                <button type = "submit" class ="submit-btn" id="btn-signup"> Sign Up For Free</button>
             </form>
             <div class="Checkboxstyled__CheckboxWrapper-ax927w-0 ealnnZ"><input type="checkbox" id="terms" name="terms" class="Checkboxstyled__StyledCheckbox-ax927w-2 kfOGth"><label for="terms" class="Checkboxstyled__CheckboxLabel-ax927w-1 hYclqr"><span>I agree to Noisli’s <a href="#" target="_blank" rel="noreferrer noopener" style="text-decoration:underline; color: rgb(102, 102, 102);">Terms &amp; Privacy.</a></span></label></div>
             <div class="signup">Already registered? <a href="./login.html">Login</a></div>

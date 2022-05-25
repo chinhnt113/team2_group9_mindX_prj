@@ -1,3 +1,7 @@
+if (!loginStatus) {
+    window.location.pathname = '/index.html'
+}
+
 // điều khiển âm thanh cả page
 const volumePanel = document.querySelector('.total-volume-panel');
 const volumeRange = volumePanel.querySelector('input');

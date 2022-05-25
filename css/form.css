@@ -1,64 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
 }
-.container{
+.container {
     display: flex;
     height: 800px;
 }
-.login{
-    width: 30%;
+.login {
+    width: 40%;
     padding: 20px 0;
 }
-.login-conainer{
+.login-container {
     text-align: center;
 }
-.login-conainer>div{
+.login-container>div {
     padding: 30px;
 }
-.advertisement{
+.advertisement {
     display: flex;
     align-items: center;
     flex: auto;
-    
 }
-.advertisement-item{
-    
+.advertisement-item {
     margin: auto;
     font-weight: 700;
     font-size: 60px;
     line-height: 1.5em;
     color: #5ce5b4;
-
 }
-.ban{
+.ban {
     width: 1px;
     background-color: rgb(102, 102, 102);
     height: 700px;
 }
-.Logoad a{ 
+.Logoad a {
     display: block;
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: 700;
     text-decoration: none;
     cursor: pointer;
     user-select: none;
     color: rgb(92, 229, 180);
 }
-.caption{
+.caption {
     font-size: 18px;
     font-weight: 600;
     color: rgb(102, 102, 102);
     line-height: 30px;
 }
-.Logologin a{
+.Logologin a {
     text-decoration: none;
 }
-.Logologin{
+.Logologin {
     width: 70%;
     border: 1px solid rgba(0, 0, 0, 0.16);
     border-radius: 18px;
@@ -72,7 +69,7 @@
     text-decoration: none;
     color: rgb(102, 102, 102);
 }
-.Logologin  i {
+.Logologin i {
     color: red;
     position: absolute;
     left: 10px;
@@ -80,27 +77,27 @@
     font-size: 16px;
     font-weight: 700;
 }
-.Logologin:hover{
-    transition: 0.2s ;
+.Logologin:hover {
+    transition: 0.2s;
     border: 3px solid rgb(92, 229, 180);
 }
-.Logologin  a span {
+.Logologin a span {
     font-size: 14px;
     text-decoration: none;
     color: rgb(102, 102, 102);
-   font-weight: 600
+    font-weight: 600
 }
-.logophu{
+.logophu {
     color: rgb(102, 102, 102);
     font-size: 15px;
 }
-.form{
+.form {
     display: flex;
     flex-direction: column;
     position: relative;
     margin: 0 auto;
 }
-.form > .input> input{
+.form>.input>input {
     width: 70%;
     font-size: 16px;
     font-weight: 500;
@@ -113,16 +110,15 @@
     border: 0.2px solid gray;
     height: 40px;
 }
-.input{
+.input {
     padding-bottom: 15px;
-    
+
 }
-.form > .input> input:hover{
+.form>.input>input:hover {
     transition: 0.3s all ease-in-out;
     border: 3px solid rgb(92, 229, 180);
 }
-
-.dangnhap{
+.submit-btn {
     width: 70%;
     font-size: 16px;
     font-weight: 500;
@@ -137,14 +133,14 @@
     margin: 0 auto;
     height: 40px;
 }
-.dangnhap:hover{
+.submit-btn:hover {
     background-color: rgb(9, 158, 158);
     cursor: pointer;
 }
-.forgot a{
+.forgot a {
     color: rgb(92, 229, 180);
 }
-.signup a{
+.signup a {
     color: rgb(92, 229, 180);
 }
 .ealnnZ {
@@ -153,12 +149,11 @@
     position: relative;
 }
 .kfOGth {
-    
+
     position: absolute;
     top: 36px;
     left: 100px;
 }
-
 .hYclqr {
     position: relative;
     padding: 2px 0px 2px 42px;
@@ -169,4 +164,11 @@
     cursor: pointer;
 }
 
-
+.invalid-value-input {
+    border: 2px solid red !important;
+    background-color: rgb(255, 226, 231);
+}
+.error-noti{
+    color: red;
+    margin-bottom: 15px;
+}
