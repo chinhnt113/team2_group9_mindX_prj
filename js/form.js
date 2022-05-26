@@ -59,13 +59,14 @@ function signup(e) {
         valid = false;
     }
     if (valid) {
-        var checkUser = localStorage.getItem(username);
-        var checkEmail = localStorage.getItem(email);
-        if (checkEmail) {
+        var checkUser = localStorage.getItem(username.value);
+        var checkEmail = localStorage.getItem(email.value);
+        if (checkEmail != null) {
             errorMsg.innerText = 'The email already exists.'
+            console.log('exit')
             valid = false;
         } 
-        if (checkUser) {
+        if (checkUser != null) {
             errorMsg.innerText = 'The username already exists.'
             valid = false;
         } 
