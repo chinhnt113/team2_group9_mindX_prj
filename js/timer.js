@@ -4,6 +4,9 @@ var mins = currentData.mins;
 var secs = currentData.secs;
 var timeOut = false;
 
+document.querySelector('.time-count-min').innerText = pad(mins);
+document.querySelector('.time-count-sec').innerText = pad(secs);
+
 const playBtn = document.querySelector('.timer-play');
 const pauseBtn = document.querySelector('.timer-pause');
 const resetBtn = document.querySelector('.timer-reset');
@@ -46,8 +49,8 @@ playBtn.addEventListener('click', () => {
 resetBtn.addEventListener('click', () => {
     mins = currentData.mins;
     secs = currentData.secs;
-    document.querySelector('.time-count-min').innerText = mins;
-    document.querySelector('.time-count-sec').innerText = secs;
+    document.querySelector('.time-count-min').innerText = pad(mins);
+    document.querySelector('.time-count-sec').innerText = pad(secs);
     console.log('reset');
 });
 

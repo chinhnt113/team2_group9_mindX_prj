@@ -44,7 +44,7 @@ function signup(e) {
         firstName: '',
         lastName: '',
         mins: '60',
-        secs: '00',
+        secs: '0',
     };
     if (!email.value) {
         email.classList.add('invalid-value-input');
