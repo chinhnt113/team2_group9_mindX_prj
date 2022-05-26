@@ -11,10 +11,6 @@ const playBtn = document.querySelector('.timer-play');
 const pauseBtn = document.querySelector('.timer-pause');
 const resetBtn = document.querySelector('.timer-reset');
 
-function pad(n) {
-    return (n < 10) ? ("0" + n) : n;
-}
-
 playBtn.addEventListener('click', () => {
     playBtn.classList.add('is-hidden');
     pauseBtn.classList.remove('is-hidden');

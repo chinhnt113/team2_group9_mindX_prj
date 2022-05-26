@@ -42,9 +42,14 @@ body {
 .is-showing{
     color:#5ce5b4;
 }
-.account-info{
+.account-info,
+.account-timer{
     margin-left: 100px;
 }
+.is-hidden{
+    display: none !important;
+}
+
 .form-name{
     margin-bottom: 50px;
     color: #5ce5b4;
@@ -74,7 +79,8 @@ body {
 .submit-info-btn:hover{
     background-color: #57c9a1;
 }
-.messProfile{
+.messProfile,
+.messTimer{
     height: 16px;
     margin-top: 10px;
     color: #57c9a1;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account | RelaxBro</title>
+    <title>Settings | RelaxBro</title>
     <link rel="icon" type="image/x-icon" href="./assets/img/relax-bro.jpg">
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/account.css">
@@ -17,8 +17,8 @@
     </div>
     <div class="container">
         <div class="navcol">
-            <div class="nav-item is-showing">Account</div>
-            <div class="nav-item">Timer</div>
+            <div class="nav-item is-showing nav-profile">Profile</div>
+            <div class="nav-item nav-timer">Timer</div>
             <div class="nav-item">Preferences</div>
             <div class="nav-item">Billing</div>
         </div>
@@ -64,6 +64,23 @@
             <form action="" onsubmit="logout()">
                 <button type="submit" class="submit-info-btn">Logout</button>
             </form>
+        </div>
+        <div class="account-timer is-hidden">
+            <div class="form-name">SET TIMER</div>
+            <div>
+                <form onsubmit="updateTimer()" action="" class="form-control-profile">
+                    <div class="form-left-col">
+                        <div class="input-label">Timer (Minute)</div>
+                        <div class="input-label">Timer (Second)</div>
+                        <button type="submit" class="submit-info-btn">Update</button>
+                        <div class="messTimer"></div>
+                    </div>
+                    <div class="form-right-col">
+                        <input type="number" min="0" max="60" id="timer_min" class="input-value">
+                        <input type="number" min="0" max="60" id="timer_sec" class="input-value">
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <script src="./js/all.js"></script>
