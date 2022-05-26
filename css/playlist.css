@@ -343,3 +343,19 @@ body {
         background-color: #FF6D6A;
     }
 }
+
+@media only screen and (max-device-width: 1024px) and (min-device-width: 768px) {
+    .slider{
+        width: 90%;
+    }
+
+}
+
+@media only screen and (max-device-width: 767px) {
+    .slider{
+        width: 100%;
+    }
+    .slider-container{
+        width: 33%;
+    }
+}

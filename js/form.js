@@ -41,6 +41,8 @@ function signup(e) {
         email: email.value,
         username: username.value,
         password: password.value,
+        firstName: '',
+        lastName: '',
     };
     if (!email.value) {
         email.classList.add('invalid-value-input');
@@ -67,8 +69,8 @@ function signup(e) {
         } 
         if (valid) {
             var json = JSON.stringify(newUser);
-            localStorage.setItem(username, json);
-            localStorage.setItem(email, json);
+            localStorage.setItem(username.value, json);
+            localStorage.setItem(email.value, json);
             window.location.pathname = '/login.html'
         }
     } else {
@@ -81,18 +83,17 @@ function login(e) {
     var loginname = document.getElementById('login_name');
     var password = document.getElementById('login_password');
     loginname.addEventListener('focus', ()=> {
-        email.classList.remove('invalid-value-input');
+        loginname.classList.remove('invalid-value-input');
     })
     password.addEventListener('focus', ()=> {
         password.classList.remove('invalid-value-input');
     })
     var user = localStorage.getItem(loginname.value);
     var data = JSON.parse(user);
-    console.log(data);
 
     if(user == null) {
         errorMsg.innerText = 'Wrong username.'
-    } else if (loginname.value == data.username && password.value == data.password) {
+    } else if (password.value == data.password) {
         sessionStorage.setItem('loginStatus', 'true');
         sessionStorage.setItem('currentAccount', data.username);
         window.location.pathname = '/playlist.html';
