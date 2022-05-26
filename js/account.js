@@ -62,5 +62,6 @@ function updatePassword(e) {
 
 function logout() {
     sessionStorage.setItem('loginStatus', 'false');
+    sessionStorage.removeItem('currentAccount');
     window.location.pathname = '/index.html';
 }

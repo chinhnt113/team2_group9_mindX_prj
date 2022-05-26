@@ -43,6 +43,8 @@ function signup(e) {
         password: password.value,
         firstName: '',
         lastName: '',
+        mins: '60',
+        secs: '00',
     };
     if (!email.value) {
         email.classList.add('invalid-value-input');

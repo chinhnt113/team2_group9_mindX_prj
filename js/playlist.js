@@ -9,6 +9,7 @@ if (loginStatus == 'false') {
 const logoutBtn = document.querySelector('.header-menu-logout');
 logoutBtn.addEventListener('click', () => {
     sessionStorage.setItem('loginStatus', 'false');
+    sessionStorage.removeItem('currentAccount');
     window.location.pathname = '/index.html';
 })
 

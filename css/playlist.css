@@ -24,7 +24,10 @@ body {
 }
 
 .header-timer{
+    position: absolute;
     display: flex;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 20px;
 }
 .header-timer > div {
@@ -40,6 +43,9 @@ body {
 .timer-pause,
 .timer-reset{
     width: 50px;
+}
+.is-hidden {
+    display: none !important;
 }
 .timer-count{
     width: 150px;
