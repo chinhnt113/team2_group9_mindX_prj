@@ -314,6 +314,17 @@ body {
     border-radius: 1.5px;
 }
 
+.footer{
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.15);
+}
+.footer-copyright{
+    padding: 20px 10px 20px;
+    text-align: center;
+}
+.footer-copyright a{
+    display: inline-block;
+}
+
 @keyframes rainbow-bg{
     100%,0%{
         background-color: #fa6f7a;
@@ -426,6 +437,9 @@ body {
         column-gap: 15px;
         margin: 15px 0;
         margin-left: 15px;
+    }
+    .header-menu-setting a{
+        color: #000 ;
     }
     .header-menu{
         display: none;
