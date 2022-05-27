@@ -6,7 +6,12 @@ if (loginStatus == 'false') {
 }
 
 //logout
-const logoutBtn = document.querySelector('.header-menu-logout');
+var logoutBtn;
+if(document.documentElement.clientWidth >=  768){
+    logoutBtn = document.querySelector('.header-menu-logout');
+} else {
+    logoutBtn = document.querySelectorAll('.header-menu-logout')[1];
+}
 logoutBtn.addEventListener('click', () => {
     sessionStorage.setItem('loginStatus', 'false');
     sessionStorage.removeItem('currentAccount');
@@ -14,7 +19,12 @@ logoutBtn.addEventListener('click', () => {
 })
 
 // điều khiển âm thanh cả page
-const volumePanel = document.querySelector('.total-volume-panel');
+var volumePanel;
+if(document.documentElement.clientWidth >=  768){
+    volumePanel = document.querySelector('.total-volume-panel');
+} else {
+    volumePanel = document.querySelectorAll('.total-volume-panel')[1];
+}
 const volumeRange = volumePanel.querySelector('input');
 const volumeProgress = volumePanel.querySelector('.volume-progress');
 var tiLeVolume = 1;
@@ -30,8 +40,15 @@ volumeRange.addEventListener('input', function (e) {
     }
 });
 
-const muteBtn = document.querySelector('.header-menu-mute');
-const unmuteBtn = document.querySelector('.header-menu-unmute');
+var muteBtn;
+var unmuteBtn;
+if(document.documentElement.clientWidth >=  768){
+    muteBtn = document.querySelector('.header-menu-mute');
+    unmuteBtn = document.querySelector('.header-menu-unmute');
+} else {
+    muteBtn = document.querySelectorAll('.header-menu-mute')[1];
+    unmuteBtn = document.querySelectorAll('.header-menu-unmute')[1];
+}
 function updateVolumeAll () {
     for (const [i,a] of music.entries()) {
         a.volume = tiLeVolume * soundVolRange[i].value / 100;
