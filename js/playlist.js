@@ -92,7 +92,6 @@ for (const [i,item] of soundItems.entries()) {
         }
     })
 }
-
 for (const [i,soundItem] of soundVolRange.entries()) {
     soundItem.addEventListener('input', function (e) {
         soundVolProgress[i].style.width = soundItem.value + '%';
@@ -106,60 +105,130 @@ const btnLeft = document.querySelector(".btn-left");
 const btnRight = document.querySelector(".btn-right");
 const slideItems = document.querySelectorAll(".slider-item");
 
-var currentPos = 0;
-let slideLength = slideItems.length;
+if(document.documentElement.clientWidth >=  1025){
+    var currentPos = 0;
+    let slideLength = slideItems.length;
 
-const rightClone1 = slideItems[0].cloneNode(true);
-const rightClone2 = slideItems[1].cloneNode(true);
-const rightClone3 = slideItems[2].cloneNode(true);
-const leftClone1 = slideItems[slideLength-1].cloneNode(true);
-const leftClone2 = slideItems[slideLength-2].cloneNode(true);
-const leftClone3 = slideItems[slideLength-3].cloneNode(true);
+    const rightClone1 = slideItems[0].cloneNode(true);
+    const rightClone2 = slideItems[1].cloneNode(true);
+    const rightClone3 = slideItems[2].cloneNode(true);
+    const leftClone1 = slideItems[slideLength-1].cloneNode(true);
+    const leftClone2 = slideItems[slideLength-2].cloneNode(true);
+    const leftClone3 = slideItems[slideLength-3].cloneNode(true);
 
-slider.append(rightClone1);
-slider.append(rightClone2);
-slider.append(rightClone3);
-slider.prepend(leftClone1);
-slider.prepend(leftClone2);
-slider.prepend(leftClone3);
+    slider.append(rightClone1);
+    slider.append(rightClone2);
+    slider.append(rightClone3);
+    slider.prepend(leftClone1);
+    slider.prepend(leftClone2);
+    slider.prepend(leftClone3);
 
-let itemWidth = slideItems[currentPos].clientWidth + 20; //thêm 10 margin và 10 border
-window.addEventListener('resize', () => {
-    itemWidth = slideItems[currentPos].clientWidth + 20;
-})
+    let itemWidth = slideItems[currentPos].clientWidth + 20; //thêm 10 margin và 10 border
+    window.addEventListener('resize', () => {
+        itemWidth = slideItems[currentPos].clientWidth + 20;
+    })
 
-const moveToPos = (i) => {
-    slider.style.transform = `translateX(${-itemWidth * i -20}px)`;
-}
-slider.addEventListener('transitionend', () => {
-    if (currentPos > slideLength) {
-        slider.style.transition = 'none';
-        currentPos -= slideLength;
+    const moveToPos = (i) => {
+        slider.style.transform = `translateX(${-itemWidth * i -20}px)`;
+    }
+    slider.addEventListener('transitionend', () => {
+        if (currentPos > slideLength) {
+            slider.style.transition = 'none';
+            currentPos -= slideLength;
+            moveToPos(currentPos);
+        }
+        if (currentPos < 1) {
+            slider.style.transition = 'none';
+            currentPos += slideLength;
+            moveToPos(currentPos);
+        }
+    })
+    const moveNext = () => {
+        currentPos ++;
+        slider.style.transition = '.5s ease-out';
         moveToPos(currentPos);
     }
-    if (currentPos < 1) {
-        slider.style.transition = 'none';
-        currentPos += slideLength;
+    const movePrevious = () => {
+        currentPos --;
+        slider.style.transition = '.5s ease-out';
         moveToPos(currentPos);
     }
-})
-const moveNext = () => {
-    currentPos ++;
-    slider.style.transition = '.5s ease-out';
-    moveToPos(currentPos);
-}
-const movePrevious = () => {
-    currentPos --;
-    slider.style.transition = '.5s ease-out';
-    moveToPos(currentPos);
-}
-btnLeft.addEventListener('click', () => {
-    movePrevious();
-})
-btnRight.addEventListener('click', () => {
-    moveNext();
-})
+    btnLeft.addEventListener('click', () => {
+        movePrevious();
+    })
+    btnRight.addEventListener('click', () => {
+        moveNext();
+    })
+    
+    for (const [i, slideItem] of slideItems.entries()) {
+        slideItem.addEventListener('click', () => {
+            currentPos = i+1;
+            slider.style.transition = '.5s ease-out';
+            moveToPos(currentPos);
+            updatePlaylist();
+        })
+    }
 
+    rightClone1.addEventListener('click', () => {
+        moveNext();
+        if (currentPos == slideLength) {
+            moveNext();
+        }
+        if (currentPos > slideLength) {
+            slider.style.transition = 'none';
+            currentPos -= slideLength;
+            moveToPos(currentPos);
+        }
+        updatePlaylist();
+    })
+    rightClone2.addEventListener('click', () => {
+        moveNext();
+        moveNext();
+        if (currentPos > slideLength) {
+            slider.style.transition = 'none';
+            currentPos -= slideLength;
+            moveToPos(currentPos);
+        }
+        updatePlaylist();
+    })
+    leftClone1.addEventListener('click', () => {
+        if(currentPos != 0) {
+            movePrevious();
+            if (currentPos == 1) {
+                movePrevious();
+            }
+        }   
+        if (currentPos < 1) {
+            slider.style.transition = 'none';
+            currentPos += slideLength;
+            moveToPos(currentPos);
+        }
+        updatePlaylist();
+    })
+    leftClone2.addEventListener('click', () => {
+        movePrevious();
+        movePrevious();
+        if (currentPos < 1) {
+            slider.style.transition = 'none';
+            currentPos += slideLength;
+            moveToPos(currentPos);
+        }
+        updatePlaylist();
+    })
+} else {
+    //mobile/ tablet
+    var currentPos = 0;
+    for (const [i, slideItem] of slideItems.entries()) {
+        slideItem.addEventListener('click', () => {
+            currentPos = i+1;
+            updatePlaylist();
+        })
+    }
+}
+
+//phát nhạc theo slider
+var playingPlaylist = -1;
+var currentPlaylist = -1;
 const updatePlaylist = () => {
     if (playingPlaylist > -1) {
         stopPlaylist(playingPlaylist);
@@ -173,65 +242,6 @@ const updatePlaylist = () => {
         stopPlaylist(currentPlaylist);
     }
 }
-
-for (const [i, slideItem] of slideItems.entries()) {
-    slideItem.addEventListener('click', () => {
-        currentPos = i+1;
-        slider.style.transition = '.5s ease-out';
-        moveToPos(currentPos);
-        updatePlaylist();
-    })
-}
-rightClone1.addEventListener('click', () => {
-    moveNext();
-    if (currentPos == slideLength) {
-        moveNext();
-    }
-    if (currentPos > slideLength) {
-        slider.style.transition = 'none';
-        currentPos -= slideLength;
-        moveToPos(currentPos);
-    }
-    updatePlaylist();
-})
-rightClone2.addEventListener('click', () => {
-    moveNext();
-    moveNext();
-    if (currentPos > slideLength) {
-        slider.style.transition = 'none';
-        currentPos -= slideLength;
-        moveToPos(currentPos);
-    }
-    updatePlaylist();
-})
-leftClone1.addEventListener('click', () => {
-    if(currentPos != 0) {
-        movePrevious();
-        if (currentPos == 1) {
-            movePrevious();
-        }
-    }   
-    if (currentPos < 1) {
-        slider.style.transition = 'none';
-        currentPos += slideLength;
-        moveToPos(currentPos);
-    }
-    updatePlaylist();
-})
-leftClone2.addEventListener('click', () => {
-    movePrevious();
-    movePrevious();
-    if (currentPos < 1) {
-        slider.style.transition = 'none';
-        currentPos += slideLength;
-        moveToPos(currentPos);
-    }
-    updatePlaylist();
-})
-
-//phát nhạc theo slider
-var playingPlaylist = -1;
-var currentPlaylist = -1;
 const playlist = (a,b,c) => {
     if (!isPlaying[a]) {
         music[a].play();
@@ -275,7 +285,6 @@ const pauselist = (a,b,c) => {
         soundItems[c].style.opacity = '.5';
     }
 }
-
 const startPlaylist = (code) => {
     switch (code) {
         case 1:
