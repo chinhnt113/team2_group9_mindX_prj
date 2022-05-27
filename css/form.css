@@ -8,11 +8,13 @@
 }
 .container {
     display: flex;
-    height: 800px;
+    min-height: 80vh;
+    justify-content: center;
 }
 .login {
     width: 40%;
     padding: 20px 0;
+    flex: 1 1 40%;
 }
 .login-container {
     text-align: center;
@@ -23,10 +25,11 @@
 .advertisement {
     display: flex;
     align-items: center;
-    flex: auto;
+    flex: 1 1 60%;
 }
 .advertisement-item {
     margin: auto;
+    padding: 20px;
     font-weight: 700;
     font-size: 60px;
     line-height: 1.5em;
@@ -35,7 +38,7 @@
 .ban {
     width: 1px;
     background-color: rgb(102, 102, 102);
-    height: 700px;
+    height: 90%;
 }
 .Logoad a {
     display: block;
@@ -171,4 +174,70 @@
 .error-noti{
     color: red;
     margin-bottom: 15px;
+}
+/* footer */
+.footer{
+    background-color: #eee;
+    padding: 50px 50px 0;
+}
+.footer a{
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+}
+.footer-info{
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.footer-logo{
+    flex: 1 1 25%;
+    font-size: 25px;
+    font-weight: 700;
+}
+.footer-content{
+    flex: 1 1 75%;
+    display: flex;
+}
+.footer-col{
+    flex-basis: 100%;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.footer-col-name{
+    margin: 10px 0;
+    font-weight: 700;
+}
+.footer-col-option{
+    margin: 10px 0;
+    font-size: 12px;
+    opacity: .8 ;
+}
+.footer-col-option:hover{
+    color: #57c9a1;
+}
+.footer-copyright{
+    padding: 50px 0 20px;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+    .advertisement{
+        display: none;
+    }
+    .footer{
+        padding: 50px 30px 0;
+    }
+    .footer-info{
+        display: block;
+    }
+    .footer-logo{
+        margin-bottom: 20px;
+    }
 }

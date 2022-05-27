@@ -138,6 +138,7 @@ body {
 }
 .footer-col{
     flex-basis: 100%;
+    padding-right: 10px;
     display: flex;
     flex-direction: column;
 }
