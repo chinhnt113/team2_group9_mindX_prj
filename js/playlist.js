@@ -1,7 +1,8 @@
 var loginStatus = sessionStorage.getItem('loginStatus');
 
 if (loginStatus == 'false') {
-    window.location.pathname = 'index.html';
+    // window.location.pathname = 'index.html';
+    window.location.assign('index.html');
 }
 
 //logout
@@ -14,7 +15,8 @@ if(document.documentElement.clientWidth >=  768){
 logoutBtn.addEventListener('click', () => {
     sessionStorage.setItem('loginStatus', 'false');
     sessionStorage.removeItem('currentAccount');
-    window.location.pathname = 'index.html';
+    // window.location.pathname = 'index.html';
+    window.location.assign('index.html');
 })
 
 // điều khiển âm thanh cả page
