@@ -15,7 +15,7 @@
 .header-nav{
 
 }
-.header-login{
+.btn-login{
     background-color: transparent;
     padding: 10px;
 }
@@ -32,8 +32,9 @@
     box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.15);
 }
 .container{
-    margin: 132px auto 0;
+    margin: 132px auto 100px;
     max-width: 720px;
+    min-height: 60vh;
 }
 .container-banner{
 
@@ -45,4 +46,85 @@
 .banner-smalltext{
     font-size: 18px;
     margin: 30px 0 50px;
+}
+
+/* footer */
+.footer{
+    color: #666666;
+    background-color: #fff;
+    padding: 50px 50px 0;
+}
+.footer a{
+    color: #666666;
+    display: inline-block;
+}
+.footer-info{
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.footer-logo{
+    flex: 1 1 25%;
+    font-size: 25px;
+    font-weight: 700;
+}
+.footer-content{
+    flex: 1 1 75%;
+    display: flex;
+}
+.footer-col{
+    padding-right: 10px;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.footer-col-name{
+    margin: 10px 0;
+    font-weight: 700;
+}
+.footer-col-option{
+    margin: 10px 0;
+    font-size: 12px;
+    opacity: .8 ;
+}
+.footer-col-option:hover{
+    color: #57c9a1;
+}
+.footer-copyright{
+    padding: 50px 0 20px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+    .footer{
+        padding: 50px 30px 0;
+    }
+    .footer-info{
+        display: block;
+    }
+    .footer-logo{
+        margin-bottom: 20px;
+    }
+    .header .btn-signup{
+        display: none;
+    }
+    .btn-login{
+        border: 0;
+        padding: 10px 25px;
+        background-color: #fff;
+        border-radius: 20px;
+    }
+    .btn-login a {
+        color: #5ce5b4;
+    }
+    .btn-login:hover{
+        box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.15);
+    }
+    .container{
+        padding: 0 20px;
+    }
 }
