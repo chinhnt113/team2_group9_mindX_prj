@@ -54,7 +54,8 @@ function signup(e) {
             var json = JSON.stringify(newUser);
             localStorage.setItem(username.value, json);
             localStorage.setItem(email.value, json);
-            window.location.pathname = 'login.html'
+            // window.location.pathname = 'login.html';
+            window.location.assign('login.html');
         }
     } else {
         errorMsg.innerText = 'Please input right in each field.'
