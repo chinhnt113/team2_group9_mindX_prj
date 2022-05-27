@@ -87,13 +87,13 @@ for (var i = 0; i < soundList.length; i++) {
     sound[i] = soundList[i];
     soundVolRange[i] = sound[i].querySelector('input');
     soundVolProgress[i] = sound[i].querySelector('.volume-progress');
-    music[i] = new Audio(`./assets/sound/${sound[i].id}.mp3`);
+    music[i] = new Audio(`../assets/sound/${sound[i].id}.mp3`);
     isPlaying[i] = false;
 }
 
 // listen to play/pause nhạc
 const soundItems = document.querySelectorAll('.sound-icon');
-const soundBar = document.querySelectorAll('.sound-volume')
+const soundBar = document.querySelectorAll('.sound-volume');
 for (const [i,item] of soundItems.entries()) {
     soundItems[i].addEventListener('click', () => {
         if (!isPlaying[i]) {
