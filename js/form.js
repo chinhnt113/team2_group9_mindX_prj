@@ -79,7 +79,7 @@ function login(e) {
     } else if (password.value == data.password) {
         sessionStorage.setItem('loginStatus', 'true');
         sessionStorage.setItem('currentAccount', data.username);
-        window.location.pathname = 'playlist.html';
+        window.location.pathname = '../playlist.html';
     } else {
         errorMsg.innerText = 'Wrong password.'
     }
