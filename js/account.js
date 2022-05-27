@@ -1,8 +1,7 @@
 var loginStatus = sessionStorage.getItem('loginStatus');
 
 if (loginStatus == 'false') {
-    // window.location.pathname = '/index.html';
-    history.back();
+    window.location.pathname = 'index.html';
 }
 
 //thay đổi các tab 
@@ -94,7 +93,7 @@ function updatePassword(e) {
 function logout() {
     sessionStorage.setItem('loginStatus', 'false');
     sessionStorage.removeItem('currentAccount');
-    window.location.pathname = '/index.html';
+    window.location.pathname = 'index.html';
 }
 
 function updateTimer(e) {

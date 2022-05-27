@@ -1,23 +1,3 @@
-// var inputEmail= document.getElementById("Email")
-// var inputPassword= document.getElementById("Password");
-// var Btn = document.getElementById("btn-login");
-
-
-// const creatToken = () =>{
-//      sessionStorage.setItem("token",(Math.floor(Math.random()*1000000)).toString());
-//  } 
-// const getToken = () =>{
-//     return sessionStorage.setItem("token")
-// } 
- 
-// Btn.addEventListener("click",(e) => {
-    
-//    if(inputEmail == "khailathanngu@gmail.com" && inputPassword == "khaideptrai")
-//     {
-//          creatToken();
-//     }
-// })
-
 var errorMsg = document.querySelector('.error-noti');
 sessionStorage.setItem('loginStatus', 'false');
 
@@ -74,7 +54,7 @@ function signup(e) {
             var json = JSON.stringify(newUser);
             localStorage.setItem(username.value, json);
             localStorage.setItem(email.value, json);
-            window.location.pathname = '/login.html'
+            window.location.pathname = 'login.html'
         }
     } else {
         errorMsg.innerText = 'Please input right in each field.'
@@ -99,7 +79,7 @@ function login(e) {
     } else if (password.value == data.password) {
         sessionStorage.setItem('loginStatus', 'true');
         sessionStorage.setItem('currentAccount', data.username);
-        window.location.pathname = '/playlist.html';
+        window.location.pathname = 'playlist.html';
     } else {
         errorMsg.innerText = 'Wrong password.'
     }
