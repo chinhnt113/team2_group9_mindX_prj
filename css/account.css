@@ -6,7 +6,7 @@ body {
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     height: 70px;
     align-items: center;
@@ -17,6 +17,16 @@ body {
     color: #5ce5b4;
     font-size: 30px;
     font-weight: 700;
+}
+
+.back-to-music{
+    text-align: center;
+    margin: 30px auto 50px;
+    max-width: 1000px;
+    text-decoration: underline;
+}
+.back-to-music > * {
+    color: #5ce5b4;
 }
 .container{
     margin: 50px auto;
@@ -190,8 +200,12 @@ body {
     .account-timer{
         margin-left: 30px;
     }
+    .form-control-profile{
+        justify-content: space-around;
+    }
     .form-name{
         margin-bottom: 30px;
+        text-align: center;
     }
     .form-left-col{
         margin-right: 0;
@@ -200,7 +214,7 @@ body {
         margin-right: 10px;
     }
     .input-value{
-        width: 100%;
+        width: 110%;
     }
 
     .footer{

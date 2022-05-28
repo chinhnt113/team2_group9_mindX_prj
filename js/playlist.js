@@ -1,31 +1,42 @@
 var loginStatus = sessionStorage.getItem('loginStatus');
 
 if (loginStatus == 'false') {
-    // window.location.pathname = 'index.html';
     window.location.assign('index.html');
 }
 
-//logout
-var logoutBtn;
-if(document.documentElement.clientWidth >=  768){
-    logoutBtn = document.querySelector('.header-menu-logout');
-} else {
-    logoutBtn = document.querySelectorAll('.header-menu-logout')[1];
-}
+//logout btn
+const logoutBtn = document.querySelector('.header-menu-logout');
 logoutBtn.addEventListener('click', () => {
     sessionStorage.setItem('loginStatus', 'false');
     sessionStorage.removeItem('currentAccount');
-    // window.location.pathname = 'index.html';
     window.location.assign('index.html');
 })
 
-// điều khiển âm thanh cả page
-var volumePanel;
-if(document.documentElement.clientWidth >=  768){
-    volumePanel = document.querySelector('.total-volume-panel');
-} else {
-    volumePanel = document.querySelectorAll('.total-volume-panel')[1];
-}
+//menu btn
+const menu = document.querySelector('.header-menu');
+const menuBtn = document.querySelector('.header-mobile-icon');
+const showMenu = document.querySelector('.header-menu-mobile');
+var isMobileMenuShowing = false;
+menu.addEventListener('blur', ()=> {
+    if(isMobileMenuShowing){
+        showMenu.style.display = 'none';
+        menuBtn.style.transform = 'scale(1)';
+        isMobileMenuShowing = false;
+    }
+})
+menuBtn.addEventListener('click', () => {
+    if(isMobileMenuShowing){
+        showMenu.style.display = 'none';
+        menuBtn.style.transform = 'scale(1)';
+        isMobileMenuShowing = false;
+    } else {
+        showMenu.style.display = 'flex';
+        menuBtn.style.transform = 'scale(1.3)';
+        isMobileMenuShowing = true;
+    }
+} )
+
+const volumePanel = document.querySelector('.total-volume-panel');
 const volumeRange = volumePanel.querySelector('input');
 const volumeProgress = volumePanel.querySelector('.volume-progress');
 var tiLeVolume = 1;
@@ -41,15 +52,8 @@ volumeRange.addEventListener('input', function (e) {
     }
 });
 
-var muteBtn;
-var unmuteBtn;
-if(document.documentElement.clientWidth >=  768){
-    muteBtn = document.querySelector('.header-menu-mute');
-    unmuteBtn = document.querySelector('.header-menu-unmute');
-} else {
-    muteBtn = document.querySelectorAll('.header-menu-mute')[1];
-    unmuteBtn = document.querySelectorAll('.header-menu-unmute')[1];
-}
+const muteBtn = document.querySelector('.header-menu-mute');
+const unmuteBtn = document.querySelector('.header-menu-unmute');
 function updateVolumeAll () {
     for (const [i,a] of music.entries()) {
         a.volume = tiLeVolume * soundVolRange[i].value / 100;

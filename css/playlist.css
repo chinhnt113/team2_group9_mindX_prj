@@ -22,10 +22,9 @@ body {
     font-weight: 700;
     color: #fff;
 }
-.header-mobile {
+/* .header-mobile {
     display: none;
-}
-
+} */
 .header-timer{
     position: absolute;
     display: flex;
@@ -46,18 +45,13 @@ body {
 .timer-pause,
 .timer-reset{
     width: 50px;
+    cursor: pointer;
 }
 .is-hidden {
     display: none !important;
 }
 .timer-count{
     width: 150px;
-}
-.time-count-min{
-
-}
-.time-count-sec{
-
 }
 
 /* volume control slide */
@@ -95,6 +89,17 @@ body {
     align-items: center;
     font-size: 24px;
     column-gap: 10px;
+}
+.header-mobile-icon{
+    display: none;
+}
+.header-menu-mobile{
+    display: flex;
+    column-gap: 10px;
+    cursor: pointer;
+}
+.menu-text{
+    display: none;
 }
 .header-menu ion-icon {
     font-size: 30px;
@@ -395,34 +400,46 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
-    .header-mobile{
+    .header-menu{
         display: block;
-        position: relative;
+        position: absolute;
+        right: 30px;
+        font-size: 16px;
     }
-    .header-mobile-icon ion-icon{
-        font-size: 30px;
+    .header-mobile-icon{
+        display: block;
     }
-    .header-mobile .total-volume-panel{
+    .header-menu ion-icon{
+        font-size: 25px;
+    }
+    .header-menu .total-volume-panel{
         visibility: visible;
     }
-    .header-mobile .volume-progress {
+    .header-menu .volume-progress {
         background: #000 !important;
     }
-    .header-mobile .volume-input-div {
+    .header-menu .volume-input-div {
         background: rgba(0, 0, 0, 0.5) !important;
     }
-    .header-mobile [type="range"]::-webkit-slider-thumb {
+    .header-menu [type="range"]::-webkit-slider-thumb {
         background: #000;
     }
-    .header-mobile [type="range"]::-moz-range-thumb {
+    .header-menu [type="range"]::-moz-range-thumb {
         background: #000;
+    }
+    .menu-text{
+        display: block;
+        line-height: 100%;
+        margin-right: 10px;
     }
     .header-menu-mobile{
         display: none;
-        padding: 15px 15px;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 10px;
         color: #000;
         position: absolute;
-        top: 52px;
+        top: 49px;
         right: -30px;
         background-color: #fff;
         border-radius: 10px;
@@ -431,18 +448,16 @@ body {
     .header-mobile:hover .header-menu-mobile{
         display: block;
     }
-    .header-menu-mobile > *{
+    .header-menu-mobile-option{
+        width: 100%;
         display: flex;
         align-items: center;
-        column-gap: 15px;
-        margin: 15px 0;
+        justify-content: flex-end;
+        margin: 10px 0;
         margin-left: 15px;
     }
     .header-menu-setting a{
         color: #000 ;
-    }
-    .header-menu{
-        display: none;
     }
     .header-timer{
         position: fixed;

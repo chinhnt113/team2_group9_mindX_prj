@@ -27,33 +27,11 @@
             <div class="timer-reset"><ion-icon name="refresh-outline"></ion-icon></div>
         </div>
         <div class="header-menu">
-            <div class="header-volume-control">
-                <div class="total-volume-panel">
-                    <div class="input-div">
-                        <div class="volume-input-div">
-                            <input type="range" value="100" step="5">
-                            <div class="volume-progress"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-menu-mute"><ion-icon name="volume-mute-outline"></ion-icon></div>
-                <div class="header-menu-unmute"><ion-icon name="volume-high-outline"></ion-icon></div>
-            </div>
-            <div class="header-menu-setting">
-                <a href="account.html"><ion-icon name="settings-outline"></ion-icon></a>
-            </div>
-            <div class="header-menu-logout">
-                <ion-icon name="log-out-outline"></ion-icon>
-            </div>
-        </div>
-        <div class="header-mobile">
             <div class="header-mobile-icon">
                 <ion-icon name="menu-outline"></ion-icon>
             </div>
             <div class="header-menu-mobile">
-                <div class="header-volume-control">
-                    <div class="header-menu-mute"><ion-icon name="volume-mute-outline"></ion-icon></div>
-                    <div class="header-menu-unmute"><ion-icon name="volume-high-outline"></ion-icon></div>
+                <div class="header-menu-mobile-option header-volume-control">
                     <div class="total-volume-panel">
                         <div class="input-div">
                             <div class="volume-input-div">
@@ -62,13 +40,16 @@
                             </div>
                         </div>
                     </div>
+                    <div class="header-menu-mute"><ion-icon name="volume-mute-outline"></ion-icon></div>
+                    <div class="header-menu-unmute"><ion-icon name="volume-high-outline"></ion-icon></div>
                 </div>
-                <div class="header-menu-setting">
-                    <ion-icon name="settings-outline"><a href="account.html"></a></ion-icon> 
-                    <a href="account.html">Settings</a>
+                <div class="header-menu-mobile-option header-menu-setting">
+                    <a class="menu-text" href="account.html">Settings</a>
+                    <a href="account.html"><ion-icon name="settings-outline"></ion-icon> </a>
                 </div>
-                <div class="header-menu-logout">
-                    <ion-icon name="log-out-outline"></ion-icon> Log out
+                <div class="header-menu-mobile-option header-menu-logout">
+                    <div class="menu-text">Log out</div> 
+                    <ion-icon name="log-out-outline"></ion-icon> 
                 </div>
             </div>
         </div>
