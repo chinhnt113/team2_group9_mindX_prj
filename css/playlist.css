@@ -28,7 +28,10 @@ body {
 .header-timer{
     position: absolute;
     display: flex;
+    height: 70px;
+    align-items: center;
     left: 50%;
+    top: 0;
     transform: translateX(-50%);
     font-size: 20px;
 }
@@ -433,6 +436,7 @@ body {
         margin-right: 10px;
     }
     .header-menu-mobile{
+        z-index: 10;
         display: none;
         flex-direction: column;
         align-items: flex-end;
@@ -460,8 +464,7 @@ body {
         color: #000 ;
     }
     .header-timer{
-        position: fixed;
-        top: 100px;
+        top: 105px
     }
     .header-timer > div {
         background-color: rgba(255, 255, 255, 0.3);

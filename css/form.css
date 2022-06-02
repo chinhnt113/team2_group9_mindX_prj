@@ -146,25 +146,6 @@
 .signup a {
     color: #6868ab;
 }
-.ealnnZ {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-.kfOGth {
-    position: absolute;
-    top: 36px;
-    left: 100px;
-}
-.hYclqr {
-    position: relative;
-    padding: 2px 0px 2px 42px;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 22px;
-    color: rgb(102, 102, 102);
-    cursor: pointer;
-}
 
 .invalid-value-input {
     border: 2px solid red !important;
@@ -173,6 +154,7 @@
 .error-noti{
     color: red;
     margin-bottom: 15px;
+    height: 15px;
 }
 /* footer */
 .footer{
