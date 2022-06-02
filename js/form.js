@@ -6,7 +6,6 @@ function signup(e) {
     var email = document.getElementById('signup_email');
     var username = document.getElementById('signup_username');
     var password = document.getElementById('signup_password');
-    var repassword = document.getElementById('signup_repassword');
     email.addEventListener('focus', ()=> {
         email.classList.remove('invalid-value-input');
     })
@@ -15,9 +14,6 @@ function signup(e) {
     })
     password.addEventListener('focus', ()=> {
         password.classList.remove('invalid-value-input');
-    })
-    repassword.addEventListener('focus', ()=> {
-        repassword.classList.remove('invalid-value-input');
     })
 
     var valid = true;
@@ -42,10 +38,6 @@ function signup(e) {
         password.classList.add('invalid-value-input');
         valid = false;
     }
-    if (!repassword.value.length) {
-        repassword.classList.add('invalid-value-input');
-        valid = false;
-    }
 
     if (valid) {
         var checkUser = localStorage.getItem(username.value);
@@ -56,10 +48,6 @@ function signup(e) {
         } 
         if (checkUser != null) {
             errorMsg.innerText = 'This username already exists.';
-            valid = false;
-        } 
-        if (password != repassword) {
-            errorMsg.innerText = 'Retype password does not match.';
             valid = false;
         }
         if (valid) {
