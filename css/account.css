@@ -14,7 +14,7 @@ body {
     box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.15);
 }
 .header-logo {
-    color: #5ce5b4;
+    color: #6868ab;
     font-size: 30px;
     font-weight: 700;
 }
@@ -26,7 +26,7 @@ body {
     text-decoration: underline;
 }
 .back-to-music > * {
-    color: #5ce5b4;
+    color: #6868ab;
 }
 .container{
     margin: 50px auto;
@@ -46,11 +46,11 @@ body {
     cursor: pointer;
 }
 .nav-item:hover{
-    color:#5ce5b4;
+    color:#6868ab;
     opacity: .9;
 }
 .is-showing{
-    color:#5ce5b4;
+    color:#6868ab;
 }
 .account-info,
 .account-timer{
@@ -65,7 +65,7 @@ body {
 
 .form-name{
     margin-bottom: 50px;
-    color: #5ce5b4;
+    color: #6868ab;
 }
 .form-control-profile{
     width: 100%;
@@ -82,7 +82,7 @@ body {
 }
 .submit-info-btn{
     margin-top: 30px;
-    background-color: #5ce5b4;
+    background-color: #6868ab;
     color: #fff;
     height: 40px;
     width: 120px;
@@ -90,13 +90,13 @@ body {
     cursor: pointer;
 }
 .submit-info-btn:hover{
-    background-color: #57c9a1;
+    background-color: #9494c5;
 }
 .messProfile,
 .messTimer{
     height: 16px;
     margin-top: 10px;
-    color: #57c9a1;
+    color: #9494c5;
     /* padding-left: 30px; */
 }
 .messPassword{
@@ -162,7 +162,7 @@ body {
     opacity: .8 ;
 }
 .footer-col-option:hover{
-    color: #57c9a1;
+    color: #9494c5;
 }
 .footer-copyright{
     padding: 50px 0 20px;

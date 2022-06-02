@@ -84,7 +84,7 @@ function updatePassword(e) {
         localStorage.setItem(currentEmail, json);
 
         noti2.innerHTML='Success!';
-        noti2.style.color = '#57c9a1';
+        noti2.style.color = '#9494c5';
         setTimeout(()=>{
             noti2.innerHTML='';
         },3000)

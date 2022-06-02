@@ -33,7 +33,7 @@
     font-weight: 700;
     font-size: 60px;
     line-height: 1.5em;
-    color: #5ce5b4;
+    color: #6868ab;
 }
 .ban {
     width: 1px;
@@ -47,7 +47,7 @@
     text-decoration: none;
     cursor: pointer;
     user-select: none;
-    color: rgb(92, 229, 180);
+    color: #6868ab;
 }
 .caption {
     font-size: 18px;
@@ -82,7 +82,7 @@
 }
 .Logologin:hover {
     transition: 0.2s;
-    border: 3px solid rgb(92, 229, 180);
+    border: 3px solid #6868ab;
 }
 .Logologin a span {
     font-size: 14px;
@@ -119,7 +119,7 @@
 }
 .form>.input>input:hover {
     transition: 0.3s all ease-in-out;
-    border: 3px solid rgb(92, 229, 180);
+    border: 3px solid #6868ab;
 }
 .submit-btn {
     width: 70%;
@@ -132,19 +132,19 @@
     height: 32px;
     line-height: 16px;
     border: none;
-    background-color: rgb(92, 229, 180);
+    background-color: #6868ab;
     margin: 0 auto;
     height: 40px;
 }
 .submit-btn:hover {
-    background-color: rgb(9, 158, 158);
+    background-color: #9494c5;
     cursor: pointer;
 }
 .forgot a {
-    color: rgb(92, 229, 180);
+    color: #6868ab;
 }
 .signup a {
-    color: rgb(92, 229, 180);
+    color: #6868ab;
 }
 .ealnnZ {
     display: flex;
@@ -152,7 +152,6 @@
     position: relative;
 }
 .kfOGth {
-
     position: absolute;
     top: 36px;
     left: 100px;
@@ -215,7 +214,7 @@
     opacity: .8 ;
 }
 .footer-col-option:hover{
-    color: #57c9a1;
+    color: #9494c5;
 }
 .footer-copyright{
     padding: 50px 0 20px;
